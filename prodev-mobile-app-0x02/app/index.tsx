@@ -1,3 +1,4 @@
+import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { Image, ImageBackground } from "expo-image";
 import {
   Dimensions,
@@ -6,7 +7,6 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   return (
@@ -15,7 +15,7 @@ export default function Index() {
         <ImageBackground
           source={require("@/assets/images/background-image.png")}
           style={styles.background}
-          resizeMode="cover"
+          contentFit="cover"
         >
           <View style={styles.companyLogo}>
             <Image source={require("@/assets/images/Logo.png")} />
